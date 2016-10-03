@@ -52,7 +52,7 @@ alert("Please Allow Notifications");
 }else{
 //alert(message_obj.user+":"+global_user);
 //if(message_obj.user!=global_user){
-if(notify_msg!=message_obj.message && notify_user!=message_obj.user ){
+if(notify_msg!=message_obj.message || notify_user!=message_obj.user ){
 
 notify_msg=message_obj.message;
 notify_user=message_obj.user;
