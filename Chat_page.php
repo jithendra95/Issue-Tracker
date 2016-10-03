@@ -63,7 +63,7 @@ notify =new Notification(message_obj.user+" Sent a Message",{
 		 
 		 setTimeout(function(){
             notify.close();
-            }, 2000);}
+            }, 5000);}
 		 }
 		// }
 }
