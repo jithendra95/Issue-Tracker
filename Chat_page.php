@@ -8,81 +8,7 @@ $_SESSION['chat__user']=$_POST['user'];}
 
 ?>
 <title>Chat Page</title>
-<style>
 
-body {
-    margin: 0;
-    padding: 0;
-	font-family:Sans-serif;
-}
-
-
-#messages{
-
-
-height:400px;
-overflow:auto;
-overflow-x:hidden
-
-}
-
-.chat_bubble{
-margin-top:5px;
-background-color:#345;
-color:white;
-width:250px;
-border-radius:5px;
-
-}
-
-.user_msg{
-margin-left:420px;
-}
-
-.transition {
--webkit-transition: all 0.85s ease;
-    -webkit-transform: scale(1.2); 
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-	//margin-left:15px;
-}
-
-.header{
-
-background-color:#add8e6;
-color:white;
-border-radius:5px;
-font-size:25px;
-font-weight: bold
-text-align:center;
-
-}
-
-#user_name_div{
-
-font-size:10px;
-font-weight: bold
-
-}
-
-#message_div{
-font-size:15px;
-margin-top:5px;
-}
-
-#msg_text{
-width:750px;
-height:30px;
-}
-
-#send_image{
-height:20px;
-width:30px;
-margin-top:-20px;
-
-}
-</style>
 
 
 
@@ -92,6 +18,7 @@ margin-top:-20px;
 <script src="jquery-1.11.2.min.js"></script>
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="CSS/chat_page.css"> 
 
 <script>
 
@@ -215,7 +142,7 @@ if(message_obj.user_type=='user'){
 message_layout="<div  align='left'  class='row'>";
 message_layout=message_layout+" <div class='col-sm-1'> &nbsp </div>";
 message_layout=message_layout+"<div class='col-sm-4'>";
-message_layout=message_layout+" <div  class='chat_bubble user_msg'><div id='user_name_div'>"+message_obj.user+"</div><div id='message_div'> "+message_obj.message+"</div></div><br/>";
+message_layout=message_layout+" <div  class='chat_bubble_user user_msg'><div id='user_name_div'>"+message_obj.user+"</div><div id='message_div'> "+message_obj.message+"</div></div><br/>";
 message_layout=message_layout+"</div>";
 message_layout=message_layout+" <div class='col-sm-3'> &nbsp </div>";
 message_layout=message_layout+"</div>";
